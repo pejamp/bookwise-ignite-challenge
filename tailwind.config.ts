@@ -11,6 +11,8 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'hero-login': `linear-gradient(rgba(42, 40, 121, 0.9), rgba(77, 74, 223, 0.7))`,
+        sidebar:
+          'radial-gradient(circle 220px at left top, rgba(37, 93, 106, 0.2) 50%, transparent),radial-gradient(circle 220px at right top, rgba(42, 40, 121, 0.4) 50%, transparent),radial-gradient(circle 295px at center right, rgba(42, 40, 121, 0.2) 20%, transparent),radial-gradient(circle 295px at bottom left, rgba(37, 93, 106, 0.2) 20%, transparent)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -25,17 +27,20 @@ const config: Config = {
         lg: '20px',
         full: '99999px',
       },
-    },
-    spacing: {
-      '1': '0.25rem',
-      '2': '0.5rem',
-      '3': '0.75rem',
-      '4': '1rem',
-      '5': '1.25rem',
-      '6': '1.5rem',
-      '7': '1.75rem',
-      '8': '2rem',
-      '10': '2.5rem',
+      gridTemplateColumns: {
+        app: '15rem 1fr',
+      },
+      spacing: {
+        '1': '0.25rem',
+        '2': '0.5rem',
+        '3': '0.75rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '7': '1.75rem',
+        '8': '2rem',
+        '10': '2.5rem',
+      },
     },
     fontSize: {
       xs: '0.75rem',

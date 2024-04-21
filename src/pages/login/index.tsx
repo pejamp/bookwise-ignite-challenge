@@ -10,7 +10,7 @@ export default function Login() {
   return (
     <div className="flex h-screen flex-row items-center justify-center gap-5 p-5">
       <div className="relative h-full w-full max-w-xl overflow-hidden rounded-md">
-        <div className="absolute inset-0 flex h-full w-full items-center justify-center bg-hero-login ">
+        <div className="absolute inset-0 flex h-full w-full items-center justify-center bg-hero-login">
           <Image src={logoImage} alt="" height={58} priority />
         </div>
         <Image
