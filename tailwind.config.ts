@@ -13,6 +13,10 @@ const config: Config = {
         'hero-login': `linear-gradient(rgba(42, 40, 121, 0.9), rgba(77, 74, 223, 0.7))`,
         sidebar:
           'radial-gradient(circle 220px at left top, rgba(37, 93, 106, 0.2) 50%, transparent),radial-gradient(circle 220px at right top, rgba(42, 40, 121, 0.4) 50%, transparent),radial-gradient(circle 295px at center right, rgba(42, 40, 121, 0.2) 20%, transparent),radial-gradient(circle 295px at bottom left, rgba(37, 93, 106, 0.2) 20%, transparent)',
+        'gradient-vertical':
+          'linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)',
+        'gradient-horizontal':
+          'linear-gradient(90deg, #7FD1CC 0%, #9694F5 100%)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -86,9 +90,6 @@ const config: Config = {
         700: '#181C2A',
         800: '#0E1116',
       },
-
-      'gradient-vertical': `linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)`,
-      'gradient-horizontal': `linear-gradient(90deg, #7FD1CC 0%, #9694F5 100%)`,
     },
   },
   plugins: [],
