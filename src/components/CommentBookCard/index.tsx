@@ -1,0 +1,50 @@
+import testImage from '@/assets/images/o-programador-pragmatico.png'
+import Image from 'next/image'
+
+interface CommentBookCardProps {}
+
+export function CommentBookCard(props: CommentBookCardProps) {
+  return (
+    <div className="max-h-[280px] max-w-[608px] rounded-md bg-gray-700 p-6">
+      <div className="mb-8 flex items-start gap-4">
+        <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-gradient-vertical">
+          <Image
+            src={testImage}
+            alt=""
+            width={100}
+            height={100}
+            className="h-[38px] w-[38px] rounded-full object-cover"
+          />
+        </div>
+        <div className="flex flex-1 flex-col">
+          <span className="leading-base text-gray-100">Jaxson Dias</span>
+          <time className="text-sm leading-base text-gray-400">Hoje</time>
+        </div>
+        <div>nota</div>
+      </div>
+      <div className="flex gap-5">
+        <div className="min-w-[108px] overflow-hidden rounded-sm">
+          <Image
+            src={testImage}
+            alt=""
+            width={150}
+            height={200}
+            className="w-full object-cover"
+          />
+        </div>
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-col">
+            <span className="font-bold leading-short text-gray-100">title</span>
+            <span className="text-sm leading-base text-gray-400">author</span>
+          </div>
+          <p className="text-sm leading-base text-gray-300">
+            Semper et sapien proin vitae nisi. Feugiat neque integer donec et
+            aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo
+            a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed
+            vulputate massa velit nibh... ver mais
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}

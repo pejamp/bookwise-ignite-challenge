@@ -1,5 +1,9 @@
+import { ActionLink } from '@/components/ActionLink'
+import { TrendBookCard } from '@/components/TrendBookCard'
 import RootLayout from '@/layouts/RootLayout'
-import { ChartLineUp } from '@phosphor-icons/react'
+import { CaretRight, ChartLineUp } from '@phosphor-icons/react'
+import bookImage from '@/assets/images/Book.png'
+import { CommentBookCard } from '@/components/CommentBookCard'
 
 interface HomeProps {}
 
@@ -10,14 +14,58 @@ export default function Home(props: HomeProps) {
         <ChartLineUp size={32} className="text-green-100" /> Início
       </h1>
       <div className="flex gap-16">
-        <div>recentes</div>
         <div>
-          <div>
-            <h2>Livros populares</h2>
-            <span>ver todos</span>
-          </div>
+          <h2 className="mb-4 text-sm leading-base text-gray-100">
+            Avaliações mais recentes
+          </h2>
           <ul>
-            <li>livro</li>
+            <li>
+              <CommentBookCard />
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="text-sm leading-base text-gray-100">
+              Livros populares
+            </h2>
+            <ActionLink size="small" color="purple">
+              ver todos <CaretRight size={16} />
+            </ActionLink>
+          </div>
+          <ul className="flex flex-col gap-3">
+            <li>
+              <TrendBookCard
+                cover={bookImage}
+                title="A revolução dos bichos"
+                author="George Orwell"
+                rating={4}
+              />
+            </li>
+            <li>
+              <TrendBookCard
+                cover={bookImage}
+                title="A revolução dos bichos"
+                author="George Orwell"
+                rating={4}
+              />
+            </li>
+            <li>
+              <TrendBookCard
+                cover={bookImage}
+                title="A revolução dos bichos"
+                author="George Orwell"
+                rating={4}
+              />
+            </li>
+            <li>
+              <TrendBookCard
+                cover={bookImage}
+                title="A revolução dos bichos"
+                author="George Orwell"
+                rating={4}
+              />
+            </li>
           </ul>
         </div>
       </div>

@@ -7,7 +7,7 @@ import { Navigation } from '@/components/Navigation'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="grid min-h-screen grid-cols-app gap-x-[96px] p-5">
+    <div className="grid min-h-screen grid-cols-app p-5">
       <aside className="flex flex-col items-center rounded-xl bg-gray-700 bg-sidebar pb-6 pt-10">
         <Image src={logoIcon} alt="" height={32} className="mb-16" />
         <nav>
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </ActionLink>
         </div>
       </aside>
-      <main className="pt-[72px]">{children}</main>
+      <main className="mx-auto pt-[72px]">{children}</main>
     </div>
   )
 }
