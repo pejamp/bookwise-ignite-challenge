@@ -1,6 +1,5 @@
-import { Star } from '@phosphor-icons/react'
-
 import Image, { StaticImageData } from 'next/image'
+import { Rating } from '../Rating'
 
 interface TrendBookCardProps {
   title: string
@@ -28,15 +27,7 @@ export function TrendBookCard(props: TrendBookCardProps) {
           </h3>
           <p className="text-sm leading-base text-gray-400">{props.author}</p>
         </div>
-        <div className="mt-auto flex items-center gap-1 text-purple-100">
-          {[1, 2, 3, 4, 5].map((value) => (
-            <Star
-              key={value}
-              size={16}
-              weight={value <= props.rating ? 'fill' : 'regular'}
-            />
-          ))}
-        </div>
+        <Rating rating={props.rating} />
       </div>
     </div>
   )

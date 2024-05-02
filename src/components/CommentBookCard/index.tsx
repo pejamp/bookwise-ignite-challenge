@@ -1,5 +1,6 @@
 import testImage from '@/assets/images/o-programador-pragmatico.png'
 import Image from 'next/image'
+import { Rating } from '../Rating'
 
 interface CommentBookCardProps {}
 
@@ -20,16 +21,16 @@ export function CommentBookCard(props: CommentBookCardProps) {
           <span className="leading-base text-gray-100">Jaxson Dias</span>
           <time className="text-sm leading-base text-gray-400">Hoje</time>
         </div>
-        <div>nota</div>
+        <Rating rating={3} />
       </div>
       <div className="flex gap-5">
-        <div className="min-w-[108px] overflow-hidden rounded-sm">
+        <div className="min-w-[108px] overflow-hidden rounded">
           <Image
             src={testImage}
             alt=""
             width={150}
             height={200}
-            className="w-full object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
         <div className="flex flex-col gap-5">
@@ -37,11 +38,14 @@ export function CommentBookCard(props: CommentBookCardProps) {
             <span className="font-bold leading-short text-gray-100">title</span>
             <span className="text-sm leading-base text-gray-400">author</span>
           </div>
-          <p className="text-sm leading-base text-gray-300">
+          <p className="line-clamp-4 text-sm leading-base text-gray-300">
             Semper et sapien proin vitae nisi. Feugiat neque integer donec et
             aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo
             a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed
-            vulputate massa velit nibh... ver mais
+            vulputate massa velit nibh. Semper et sapien proin vitae nisi.
+            Feugiat neque integer donec et aenean posuere amet ultrices. Cras
+            fermentum id pulvinar varius leo a in. Amet libero pharetra nunc
+            elementum fringilla velit ipsum. Sed vulputate massa velit nibh.
           </p>
         </div>
       </div>
