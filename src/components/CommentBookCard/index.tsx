@@ -1,6 +1,7 @@
 import testImage from '@/assets/images/o-programador-pragmatico.png'
 import Image from 'next/image'
 import { Rating } from '../Rating'
+import { Avatar } from '../Avatar'
 
 interface CommentBookCardProps {}
 
@@ -8,15 +9,7 @@ export function CommentBookCard(props: CommentBookCardProps) {
   return (
     <div className="max-h-[280px] max-w-[608px] rounded-md bg-gray-700 p-6">
       <div className="mb-8 flex items-start gap-4">
-        <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-gradient-vertical">
-          <Image
-            src={testImage}
-            alt=""
-            width={100}
-            height={100}
-            className="h-[38px] w-[38px] rounded-full object-cover"
-          />
-        </div>
+        <Avatar src={testImage} alt="" width={100} height={100} size="medium" />
         <div className="flex flex-1 flex-col">
           <span className="leading-base text-gray-100">Jaxson Dias</span>
           <time className="text-sm leading-base text-gray-400">Hoje</time>

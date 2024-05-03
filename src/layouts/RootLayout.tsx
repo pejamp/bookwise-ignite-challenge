@@ -11,6 +11,7 @@ import {
 } from '@phosphor-icons/react'
 import { Navigation } from '@/components/Navigation'
 import testImage from '@/assets/images/o-programador-pragmatico.png'
+import { Avatar } from '@/components/Avatar'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const isLoggedIn = true
@@ -42,15 +43,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="mt-auto">
           {isLoggedIn ? (
             <ActionLink>
-              <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-gradient-vertical">
-                <Image
-                  src={testImage}
-                  alt=""
-                  width={100}
-                  height={100}
-                  className="h-[30px] w-[30px] rounded-full object-cover"
-                />
-              </div>
+              <Avatar
+                src={testImage}
+                alt=""
+                width={100}
+                height={100}
+                size="small"
+              />
               <span>Cristofer</span>
               <SignOut size={20} color="#F75A68" />
             </ActionLink>
