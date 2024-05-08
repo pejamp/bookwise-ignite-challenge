@@ -7,7 +7,7 @@ export function Input({ ...rest }: InputProps) {
   return (
     <label className="flex items-center gap-2 rounded border border-gray-500 px-5 py-3 text-gray-500 focus-within:border-green-200 focus-within:text-green-200">
       <input
-        className="bg-transparent flex-1 text-sm leading-base text-gray-200 caret-green-100 outline-none placeholder:text-gray-400"
+        className="flex-1 bg-transparent text-sm leading-base text-gray-200 caret-green-100 outline-none placeholder:text-gray-400"
         {...rest}
       />
       <button className="text-inherit">

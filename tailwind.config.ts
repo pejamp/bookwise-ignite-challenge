@@ -33,6 +33,7 @@ const config: Config = {
       },
       gridTemplateColumns: {
         app: '15rem 1fr',
+        explore: 'repeat(3, minmax(0, 318px))',
       },
       spacing: {
         '1': '0.25rem',
