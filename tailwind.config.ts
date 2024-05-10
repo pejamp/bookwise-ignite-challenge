@@ -22,7 +22,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        'nunito-sans': ['var(--font-nunito-sans)', 'sans-serif'],
+        'nunito-sans': ['Nunito Sans', 'sans-serif'],
       },
       borderRadius: {
         xs: '2.5px',

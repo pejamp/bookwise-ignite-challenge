@@ -4,5 +4,30 @@
 
 body {
   background: #0E1116;
-  -webkit-font-smoothing: 'antialiased'
+  -webkit-font-smoothing: 'antialiased';
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #181C2A;
+  border-radius: 9999px;
+  margin: 8px 0;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #252D4A;
+  border-radius: 9999px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #303F73;
 }
