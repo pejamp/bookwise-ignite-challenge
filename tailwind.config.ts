@@ -72,6 +72,23 @@ const config: Config = {
           800: '#0E1116',
         },
       },
+      keyframes: {
+        overlayShow: {
+          from: { opacity: '0' },
+          to: { opacity: '0.6' },
+        },
+        contentShow: {
+          from: {
+            opacity: '0',
+            transform: 'translateX(110%)',
+          },
+          to: { opacity: '1', transform: 'translateX(0%)' },
+        },
+      },
+      animation: {
+        overlayShow: 'overlayShow 300ms ease-out',
+        contentShow: 'contentShow 300ms ease-out',
+      },
     },
     fontSize: {
       xs: '0.75rem',

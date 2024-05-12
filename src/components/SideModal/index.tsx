@@ -4,14 +4,17 @@ import Image from 'next/image'
 import bookImage from '@/assets/images/14-habitos-de-desenvolvedores-altamente-produtivos.png'
 import { Rating } from '../Rating'
 import { Avatar } from '../Avatar'
+import { LoginButton } from '../LoginButton'
+import googleIcon from '@/assets/icons-google.svg'
+import githubIcon from '@/assets/icons-github-fill.svg'
 
 interface SideModalProps {}
 
 export function SideModal(props: SideModalProps) {
   return (
     <Dialog.Portal>
-      <Dialog.Overlay className="fixed inset-0 bg-black opacity-60" />
-      <Dialog.Content className="fixed right-0 top-0 flex h-screen w-full max-w-[660px] flex-col overflow-y-scroll overscroll-contain bg-gray-800 px-12 py-16">
+      <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0 bg-black opacity-60" />
+      <Dialog.Content className="data-[state=open]:animate-contentShow fixed right-0 top-0 flex h-screen w-full max-w-[660px] flex-col overflow-y-scroll overscroll-contain bg-gray-800 px-12 py-16">
         <Dialog.Close asChild>
           <button
             className="absolute right-[48px] top-[24px] inline-flex h-[24px] w-[24px] cursor-pointer appearance-none items-center justify-center rounded-full text-gray-400 focus:outline-none"
@@ -79,9 +82,43 @@ export function SideModal(props: SideModalProps) {
             <span className="text-sm leading-base text-gray-200">
               avaliações
             </span>
-            <button className="rounded px-2 py-1 font-bold leading-base text-purple-100 transition duration-200 ease-in-out hover:bg-purple-100 hover:bg-opacity-5">
-              avaliar
-            </button>
+            <Dialog.Root>
+              <Dialog.Trigger asChild>
+                <button className="rounded px-2 py-1 font-bold leading-base text-purple-100 transition duration-200 ease-in-out hover:bg-purple-100 hover:bg-opacity-5">
+                  avaliar
+                </button>
+              </Dialog.Trigger>
+              <Dialog.Portal>
+                <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0 bg-black opacity-60" />
+                <Dialog.Content className="fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] max-w-[516px] translate-x-[-50%] translate-y-[-50%] rounded-xl bg-gray-700 px-[72px] py-14 shadow-[hsl(0_0%_0%_/_25%)_4px_16px_24px_0px] focus:outline-none">
+                  <Dialog.Title className="mb-10 text-center text-md font-bold leading-short text-gray-200">
+                    Faça login para deixar sua avaliação
+                  </Dialog.Title>
+                  <Dialog.Close asChild>
+                    <button
+                      className="absolute right-[16px] top-[16px] inline-flex h-[24px] w-[24px] appearance-none items-center justify-center rounded-full text-gray-400 focus:outline-none"
+                      aria-label="Close"
+                    >
+                      <X size={24} />
+                    </button>
+                  </Dialog.Close>
+                  <div className="flex flex-col gap-4">
+                    <LoginButton.Root>
+                      <LoginButton.Prefix>
+                        <Image src={googleIcon} alt="" width={50} height={50} />
+                      </LoginButton.Prefix>
+                      <LoginButton.Text>Entrar com Google</LoginButton.Text>
+                    </LoginButton.Root>
+                    <LoginButton.Root>
+                      <LoginButton.Prefix>
+                        <Image src={githubIcon} alt="" width={50} height={50} />
+                      </LoginButton.Prefix>
+                      <LoginButton.Text>Entrar com GitHub</LoginButton.Text>
+                    </LoginButton.Root>
+                  </div>
+                </Dialog.Content>
+              </Dialog.Portal>
+            </Dialog.Root>
           </div>
 
           <ul className="flex flex-col gap-3">
