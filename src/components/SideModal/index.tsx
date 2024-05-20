@@ -1,4 +1,4 @@
-import { BookOpen, BookmarkSimple, X } from '@phosphor-icons/react'
+import { BookOpen, BookmarkSimple, Check, X } from '@phosphor-icons/react'
 import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/image'
 import bookImage from '@/assets/images/14-habitos-de-desenvolvedores-altamente-produtivos.png'
@@ -8,10 +8,12 @@ import { LoginButton } from '../LoginButton'
 import googleIcon from '@/assets/icons-google.svg'
 import githubIcon from '@/assets/icons-github-fill.svg'
 import { Textarea } from '../Textarea'
+import { ActionButton } from '../ActionButton'
+import { RatingInput } from '../RatingInput'
 
-interface SideModalProps {}
+// interface SideModalProps {}
 
-export function SideModal(props: SideModalProps) {
+export function SideModal() {
   return (
     <Dialog.Portal>
       <Dialog.Overlay className="fixed inset-0 bg-black opacity-60 data-[state=open]:animate-overlayShow" />
@@ -136,18 +138,22 @@ export function SideModal(props: SideModalProps) {
                   nome
                 </span>
               </div>
-              <div>nota</div>
+              <RatingInput />
             </div>
             <Textarea placeholder="Escreva sua avaliação" />
             <div className="mt-3 flex justify-end gap-2">
-              <button>button</button>
-              <button>button</button>
+              <ActionButton>
+                <X size={24} className="text-purple-100" />
+              </ActionButton>
+              <ActionButton>
+                <Check size={24} className="text-green-100" />
+              </ActionButton>
             </div>
           </form>
 
           <ul className="flex flex-col gap-3">
             <li>
-              <div className="rounded-md bg-gray-700 p-6">
+              <div className="rounded-md bg-gray-600 p-6">
                 <div className="mb-5 flex items-start gap-4">
                   <Avatar
                     size="medium"
