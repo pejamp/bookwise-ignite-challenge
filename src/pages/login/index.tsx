@@ -5,8 +5,13 @@ import googleIcon from '@/assets/icons-google.svg'
 import githubIcon from '@/assets/icons-github-fill.svg'
 import rocketIcon from '@/assets/icons-rocket-launch.svg'
 import { LoginButton } from '@/components/LoginButton'
+import { signIn, useSession } from 'next-auth/react'
 
 export default function Login() {
+  const session = useSession()
+
+  console.log(session.data)
+
   return (
     <div className="flex h-screen flex-row items-center justify-center gap-5 p-5">
       <div className="relative h-full w-full max-w-xl overflow-hidden rounded-md">
@@ -18,6 +23,8 @@ export default function Login() {
           alt=""
           width={600}
           height={900}
+          quality={100}
+          priority
           className="h-full w-full"
         />
       </div>
@@ -29,7 +36,7 @@ export default function Login() {
           Faça seu login ou acesse como visitante.
         </p>
         <div className="flex flex-col gap-4">
-          <LoginButton.Root>
+          <LoginButton.Root onClick={() => signIn('google')}>
             <LoginButton.Prefix>
               <Image src={googleIcon} alt="" height={32} />
             </LoginButton.Prefix>
