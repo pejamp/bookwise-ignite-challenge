@@ -10,7 +10,7 @@ import { signIn, useSession } from 'next-auth/react'
 export default function Login() {
   const session = useSession()
 
-  console.log(session.data)
+  console.log(session)
 
   return (
     <div className="flex h-screen flex-row items-center justify-center gap-5 p-5">
